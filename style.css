@@ -8,11 +8,11 @@ body {
   overflow: hidden;
 }
 
-.container {
+/* .container {
   position: relative;
   width: 40vh;
   height: 40vh;
-}
+} */
 
 .sun {
   position: absolute;
@@ -28,8 +28,8 @@ body {
 
 .orbit {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  /* left: 50%; */
   border-radius: 50%;
   border: 0.05em dashed white;
   transform: translate(-50%, -50%);
@@ -38,15 +38,16 @@ body {
 .planet {
   position: absolute;
   border-radius: 50%;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  /* left: 50%; */
   transform-origin: translate(-50%, -50%);
-  animation: rotate linear infinite;
+  /* animation: rotate linear infinite; */
 }
 
 .mercury-orbit {
   width: 10em;
   height: 10em;
+  
 }
 
 .venus-orbit {
@@ -83,44 +84,87 @@ body {
 .mercury {
   width: 1em;
   height: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
   background-color: gray;
-  animation-duration: 10s;
+  animation: rotate_mercury 10s linear infinite;
 }
 
 .venus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
   width: 1.5em;
   height: 1.5em;
   background-color: orange;
-  animation-duration: 15s;
+  animation: rotate_venus 15s linear infinite;
 }
 
 .earth {
   width: 1.8em;
   height: 1.8em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
   background-color: blue;
-  animation-duration: 20s;
+  animation: rotate_earth 20s linear infinite;
 }
 
 .mars {
   width: 1.5em;
   height: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
   background-color: red;
-  animation-duration: 25s;
+  animation: rotate_mars 25s linear infinite;
 }
 
 .jupiter {
   width: 2.5em;
   height: 2.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
   background-color: brown;
-  animation-duration: 35s;
+  animation: rotate_jupiter 35s linear infinite;
 }
 
 .saturn {
   width: 2em;
   height: 2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
   background-color: goldenrod;
   animation-duration: 40s;
-  position: relative;
+  /* position: relative; */
+  animation: rotate_saturn 45s linear infinite;
 }
 
 .saturn-ring {
@@ -140,5 +184,61 @@ body {
   }
   100% {
       transform: rotate(360deg) translateX(5em) rotate(-360deg);
+  }
+}
+
+@keyframes rotate_mercury {
+  0% {
+      transform: rotate(0deg) translateX(-80px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(-80px) rotate(-360deg);
+  }
+}
+
+@keyframes rotate_venus {
+  0% {
+      transform: rotate(0deg) translateX(-113px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(-113px) rotate(-360deg);
+  }
+}
+
+@keyframes rotate_earth {
+  0% {
+      transform: rotate(0deg) translateX(-145px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(-145px) rotate(-360deg);
+  }
+}
+
+@keyframes rotate_mars {
+  0% {
+      transform: rotate(0deg) translateX(-175px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(-175px) rotate(-360deg);
+  }
+}
+
+
+@keyframes rotate_jupiter {
+  0% {
+      transform: rotate(0deg) translateX(-210px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(-210px) rotate(-360deg);
+  }
+}
+
+
+@keyframes rotate_saturn {
+  0% {
+      transform: rotate(0deg) translateX(-240px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(-240px) rotate(-360deg);
   }
 }
